@@ -1,0 +1,27 @@
+from django.db import models
+
+
+class Property(models.Model):
+    area_unit = models.CharField(max_length=32, null=True, blank=True)
+    bathrooms = models.FloatField(null=True, blank=True)
+    bedrooms = models.PositiveIntegerField(null=True, blank=True)
+    home_size = models.PositiveIntegerField(null=True, blank=True)
+    home_type = models.CharField(max_length=32, null=True, blank=True)
+    last_sold_date = models.DateField(null=True, blank=True)
+    last_sold_price = models.PositiveIntegerField(null=True, blank=True)
+    link = models.URLField(max_length=1024, null=True, blank=True)
+    price = models.CharField(max_length=32, null=True, blank=True)
+    property_size = models.PositiveIntegerField(null=True, blank=True)
+    rent_price = models.PositiveIntegerField(null=True, blank=True)
+    rentzestimate_amount = models.PositiveIntegerField(null=True, blank=True)
+    rentzestimate_last_updated = models.DateField(null=True, blank=True)
+    tax_value = models.PositiveIntegerField(null=True, blank=True)
+    tax_year = models.PositiveSmallIntegerField(null=True, blank=True)
+    year_built = models.PositiveSmallIntegerField(null=True, blank=True)
+    zestimate_amount = models.PositiveIntegerField(null=True, blank=True)
+    zestimate_last_updated = models.DateField(null=True, blank=True)
+    zillow_id = models.IntegerField(null=True, blank=True)
+    address = models.CharField(max_length=256, null=True, blank=True)
+    city = models.CharField(max_length=128, null=True, blank=True)
+    state = models.CharField(max_length=8, null=True, blank=True)
+    zipcode = models.CharField(max_length=16, null=True, blank=True)
